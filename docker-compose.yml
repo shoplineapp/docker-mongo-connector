@@ -1,0 +1,13 @@
+version: "3"
+services:
+  connector:
+    container_name: mongo-connector
+    restart: always
+    volumes:
+      - ./mongo-connector:/mongo-connector
+    build:
+      context: .
+      args:
+        SOURCE_HOST: ""
+        TARGET_HOST: ""
+
