@@ -8,6 +8,5 @@ services:
     build:
       context: .
       args:
-        SOURCE_HOST: ""
-        TARGET_HOST: ""
-
+        SOURCE_HOST: "" # mognodb://192.168.0.1
+        TARGET_HOST: "" # mongodb+srv://account:password@abcd.mongodb.net/shopline
