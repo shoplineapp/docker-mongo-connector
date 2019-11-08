@@ -7,7 +7,9 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TZ UTC
 ENV SOURCE_HOST=$SOURCE_HOST
 ENV TARGET_HOST=$TARGET_HOST
-RUN pip install mongo-connector pymongo[srv]
+RUN apt-get update && \
+    apt-get install -y build-essential python-dev && \
+    pip install mongo-connector pymongo[srv]
 
 COPY config.json /tmp/config.json
 WORKDIR /mongo-connector
